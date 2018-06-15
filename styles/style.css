@@ -1,0 +1,147 @@
+@import 
+  url(https://fonts.googleapis.com/css?family=Libre+Baskerville|Oxygen);
+
+:root {
+  --label-font: 'Libre Baskerville', serif;
+  --title-font: 'Oxygen', Roboto, sans-serif;
+  --space-between-elements: 10px;
+}
+
+body {
+  overflow: hidden;
+  height: 100vh;
+  background-color: #eeeeee78;
+}
+
+#title {
+  position: relative;
+  width: 100vw;
+  margin: auto;
+  text-align: center;
+  font-family: var(--title-font);
+  color: #a6d0d0;
+}
+
+.container {
+  position: relative; 
+  width: 70%;
+  top: 10px;
+  margin: 0 auto;
+  background: linear-gradient(35deg, #ccffff1f, #ffcccc2e);
+  border-radius: 10px;
+  border: 1px solid #47cf7329;
+  text-align: center;
+}
+
+#description {
+  font-size: 14px;
+  font-weight: 700;
+  font-family: Monospace, sans-serif;
+}
+
+#survey-form {
+  
+}
+
+#resource {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 5px;
+  margin-bottom: 25px;
+}
+
+#languages {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 5px;
+  margin-bottom: 15px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"]{
+  border-radius: 3px;
+  outline-style: none;
+  border: 1px solid rgba(0,0,0,0.1);
+  margin-bottom: var(--space-between-elements);
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus,
+textarea:focus {
+  box-shadow: 0px 0px 10px 0.5px #0ebeff94;
+}
+
+input[type="radio"] {
+  
+}
+
+input[type="submit"] {
+  margin: 10px 0 10px 0;
+  border: 0.5px solid #76daff;
+  border-radius: 5px;
+  width: 150px;
+  background-color: #76daff2e;
+  outline-style: none;
+  font-weight: 600;
+}
+
+input[type="submit"]:focus {
+  box-shadow: 0px 0px 5px 1px #0745f366;
+}
+
+input[type="number"] {
+  min-width: 70px;
+}
+
+label {
+  display: block;
+}
+
+form label {
+  font-size: 14px;
+  font-weight: 500;
+  font-family: var(--label-font);
+  margin: 5px 0px 2px 0px;
+  color: #666;
+}
+
+#name {
+  
+}
+
+#email {
+  
+}
+
+textarea {
+  min-width: 50%;
+  max-width: 70%;
+  border-radius: 5px;
+  border: 1px solid #cccccc8f;
+  box-sizing: border-box;
+  min-height: 50px;
+  max-height: 65px;
+}
+
+select {
+  margin-bottom: 15px;
+}
+
+.elements-title {
+  color: #343436;
+}
+
+fieldset {
+  display: inline-block;
+  border-color: rgba(255,255,255,0.10);
+  border-radius: 10px;
+  padding-bottom: 0px;
+}
+
+@media screen and (max-width: 900px ) {
+  body {
+    overflow: visible;
+  }
+}
