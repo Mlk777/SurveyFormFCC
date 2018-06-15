@@ -1,0 +1,99 @@
+<html>
+
+<head>
+  <link rel="stylesheet" type="text/css" href="styles/style.css">
+</head>
+
+<body>
+  <header>
+    <h1 id="title">Survey Form</h1>
+  </header>
+
+  <div class="container">
+    <p id="description">We would like to know what's your thoughts on programming </p>
+    <form id="survey-form" method="POST">
+      <section class="identity">
+        <label for="name" id="name-label" class="elements-title">* Name :</label>
+        <input type="text" name="name" placeholder="Enter your name here" id="name" required>
+        <label for="email" id="email-label" class="elements-title">* Email :</label>
+        <input type="email" name="email" placeholder="Enter your email here" id="email" required>
+        <label for="age" id="number-label" class="elements-title">* Age :</label>
+        <input type="number" name="age" min="7" max="95" placeholder="Your age" id="number" required>
+      </section>
+
+      <section class="questions">
+        <label for="role" class="elements-title">Which option best describe your current role ?</label>
+        <select id="dropdown">
+          <option disabled>Select one</option>
+          <option value="aspiring">Aspiring developer</option>
+          <option value="back">Back-end developer</option>
+          <option value="front">Front-end developer</option>
+          <option value="full">Full stack developer</option>
+          <option value="designer">Designer</option>
+          <option value="almighty">God</option>
+        </select>
+        <br>
+
+        <fieldset>
+          <legend>
+            <label for="resource" class="elements-title">Which learning format suits you the most ?</label>
+          </legend>
+          <div id="resource">
+            <label for="video">
+              <input type="radio" name="resourceFormat" value="video"> Video</label>
+
+            <label for="book">
+              <input type="radio" name="resourceFormat" value="book">Book</label>
+
+            <label for="forum">
+              <input type="radio" name="resourceFormat" value="forum">Forum post</label>
+
+            <label for="other">
+              <input type="radio" name="resourceFormat" value="other">Other</label>
+
+            <label for="everything">
+              <input type="radio" name="resourceFormat" value="everything">A bit of everything</label>
+
+            <label for="self">
+              <input type="radio" name="resourceFormat" value="self">Self-learning (practice)</label>
+          </div>
+        </fieldset>
+
+        <fieldset style="margin: 15px 0 15px 0">
+          <legend>
+            <div id="labelLanguage">
+              <label for="language" class="elements-title">Which languages are you learning ?</label>
+            </div>
+          </legend>
+
+          <div id="languages">
+            <label for="html">
+              <input type="checkbox" name="html" value="html">HTML</label>
+
+            <label for="css">
+              <input type="checkbox" name="css" value="css">CSS</label>
+            <label for="javascript">
+              <input type="checkbox" name="javascript" value="javascript">Javascript</label>
+            <label for="ruby">
+              <input type="checkbox" name="ruby" value="ruby">Ruby</label>
+            <label for="python">
+              <input type="checkbox" name="python" value="python">Python</label>
+            <label for="php">
+              <input type="checkbox" name="php" value="php">PHP</label>
+            <label for="go">
+              <input type="checkbox" name="go" value="go">GO</label>
+          </div>
+        </fieldset>
+        <br>
+        <textarea name="textarea" rows="10" cols="50" placeholder="Write your comment here">
+</textarea>
+      </section>
+      <input type="submit" id="submit" value="Submit">
+    </form>
+  </div>
+</body>
+
+</html>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="scripts/main.js"></script>
