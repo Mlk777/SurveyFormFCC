@@ -3,14 +3,24 @@
 
 :root {
   --label-font: 'Libre Baskerville', serif;
+  --description-font: Monospace, sans-serif;
   --title-font: 'Oxygen', Roboto, sans-serif;
-  --space-between-elements: 10px;
+  --main-title-color: #a6d0d0;
+  --body-background-color: #eeeeee78;
+  --container-gradient: 35deg, #ccffff12, #ffcccc14;
+  --container-border-color: #47cf7329;
+  --elements-title-color: #343436;
+  --textarea-border-color: #cccccc8f;
+  --textarea-focus-box-color: #0ebeff94;
+  --submit-border-color: #76daff;
+  --submit-background-color: #76daff2e;
+  --submit-focus-box-color: #0745f366;
 }
 
 body {
   overflow: hidden;
   height: 100vh;
-  background-color: #eeeeee78;
+  background-color: var(--body-background-color);
 }
 
 #title {
@@ -19,7 +29,7 @@ body {
   margin: auto;
   text-align: center;
   font-family: var(--title-font);
-  color: #a6d0d0;
+  color: var(--main-title-color);
 }
 
 .container {
@@ -27,16 +37,16 @@ body {
   width: 70%;
   top: 10px;
   margin: 0 auto;
-  background: linear-gradient(35deg, #ccffff1f, #ffcccc2e);
+  background: linear-gradient(var(--container-gradient));
   border-radius: 10px;
-  border: 1px solid #47cf7329;
+  border: 1px solid var(--container-border-color);
   text-align: center;
 }
 
 #description {
   font-size: 14px;
   font-weight: 700;
-  font-family: Monospace, sans-serif;
+  font-family: var(--description-font);
 }
 
 #survey-form {
@@ -63,14 +73,14 @@ input[type="number"]{
   border-radius: 3px;
   outline-style: none;
   border: 1px solid rgba(0,0,0,0.1);
-  margin-bottom: var(--space-between-elements);
+  margin-bottom: 10px;
 }
 
 input[type="text"]:focus,
 input[type="email"]:focus,
 input[type="number"]:focus,
 textarea:focus {
-  box-shadow: 0px 0px 10px 0.5px #0ebeff94;
+  box-shadow: 0px 0px 10px 0.5px var(--textarea-focus-box-color);
 }
 
 input[type="radio"] {
@@ -79,16 +89,16 @@ input[type="radio"] {
 
 input[type="submit"] {
   margin: 10px 0 10px 0;
-  border: 0.5px solid #76daff;
+  border: 0.5px solid var(--submit-border-color);
   border-radius: 5px;
   width: 150px;
-  background-color: #76daff2e;
+  background-color: var(--submit-background-color);
   outline-style: none;
   font-weight: 600;
 }
 
 input[type="submit"]:focus {
-  box-shadow: 0px 0px 5px 1px #0745f366;
+  box-shadow: 0px 0px 5px 1px var(--submit-focus-box-color);
 }
 
 input[type="number"] {
@@ -119,7 +129,7 @@ textarea {
   min-width: 50%;
   max-width: 70%;
   border-radius: 5px;
-  border: 1px solid #cccccc8f;
+  border: 1px solid var(--textarea-border-color);
   box-sizing: border-box;
   min-height: 50px;
   max-height: 65px;
@@ -130,7 +140,7 @@ select {
 }
 
 .elements-title {
-  color: #343436;
+  color: var(--elements-title-color);
 }
 
 fieldset {
