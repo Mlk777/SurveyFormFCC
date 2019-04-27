@@ -1,5 +1,4 @@
-@import 
-  url(https://fonts.googleapis.com/css?family=Libre+Baskerville|Oxygen);
+@import url(https://fonts.googleapis.com/css?family=Libre+Baskerville|Oxygen);
 
 :root {
   --label-font: 'Libre Baskerville', serif;
@@ -30,10 +29,11 @@ body {
   text-align: center;
   font-family: var(--title-font);
   color: var(--main-title-color);
+  letter-spacing: 0.15em;
 }
 
 .container {
-  position: relative; 
+  position: relative;
   width: 70%;
   top: 10px;
   margin: 0 auto;
@@ -45,13 +45,12 @@ body {
 }
 
 #description {
-  font-size: 14px;
+  font-size: 0.8em;
   font-weight: 700;
   font-family: var(--description-font);
 }
 
 #survey-form {
-  
 }
 
 #resource {
@@ -68,27 +67,31 @@ body {
   margin-bottom: 15px;
 }
 
-input[type="text"],
-input[type="email"],
-input[type="number"]{
+input[type='text'],
+input[type='email'],
+input[type='number'] {
   border-radius: 3px;
   outline-style: none;
-  border: 1px solid rgba(0,0,0,0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
   margin-bottom: 10px;
 }
 
-input[type="text"]:focus,
-input[type="email"]:focus,
-input[type="number"]:focus,
-textarea:focus {
+input[type='text']:focus,
+input[type='email']:focus,
+input[type='number']:focus {
+  text-align: center;
+}
+
+input[type='text']:focus,
+input[type='email']:focus,
+input[type='number']:focus {
   box-shadow: 0px 0px 10px 0.5px var(--textarea-focus-box-color);
 }
 
-input[type="radio"] {
-  
+input[type='radio'] {
 }
 
-input[type="submit"] {
+input[type='submit'] {
   margin: 10px 0 10px 0;
   border: 0.5px solid var(--submit-border-color);
   border-radius: 5px;
@@ -96,13 +99,14 @@ input[type="submit"] {
   background-color: var(--submit-background-color);
   outline-style: none;
   font-weight: 600;
+  padding: 0.5em;
 }
 
-input[type="submit"]:focus {
+input[type='submit']:focus {
   box-shadow: 0px 0px 5px 1px var(--submit-focus-box-color);
 }
 
-input[type="number"] {
+input[type='number'] {
   min-width: 70px;
 }
 
@@ -119,11 +123,10 @@ form label {
 }
 
 #name {
-  
 }
 
 #email {
-  
+  width: 170px;
 }
 
 textarea {
@@ -142,16 +145,17 @@ select {
 
 .elements-title {
   color: var(--elements-title-color);
+  font-style: italic;
 }
 
 fieldset {
   display: inline-block;
-  border-color: rgba(255,255,255,0.10);
+  border-color: rgba(255, 255, 255, 0.1);
   border-radius: 10px;
   padding-bottom: 0px;
 }
 
-@media screen and (max-width: 900px ) {
+@media screen and (max-width: 900px) {
   body {
     overflow: visible;
   }
